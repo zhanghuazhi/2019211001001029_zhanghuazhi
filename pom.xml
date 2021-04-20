@@ -40,6 +40,18 @@
          <artifactId>mssql-jdbc</artifactId>
          <version>8.4.1.jre8</version>
        </dependency>
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+        <!--lombok : 自动生成 get set 方法-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
+        </dependency>
     </dependencies>
 
     <build>

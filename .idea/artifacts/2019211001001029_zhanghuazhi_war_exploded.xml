@@ -15,6 +15,8 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:8.4.1.jre8" />
+          <element id="library" level="project" name="Maven: commons-dbutils:commons-dbutils:1.7" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.8" />
         </element>
       </element>
       <element id="directory" name="META-INF">

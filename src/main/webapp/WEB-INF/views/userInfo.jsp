@@ -6,22 +6,32 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="zhz.model.User" %>
-<%@include file="header.jsp" %>
 <%@page  contentType="text/html;charset=UTF-8" language="java"%>
-
-<h2>User Info</h2>
+<%@include file="header.jsp" %>
+<h1>User Info</h1>
 <%
-
-    User user=(User) request.getAttribute("user");
+     //read cookies
+    Cookie [] allCookies=request.getCookies();
+    for (Cookie c:allCookies){
+        //get one by one
+        out.println("<br/"+c.getName()+" --- "+c.getValue());
+    }
+%>
+<%
+    User u=(User) session.getAttribute("user");
 %>
 
 <table border="1" >
     <tr>
-        <td>Username</td><td><%=user.getUsername()%></td> </tr>
-    <td>Password</td><td><%=user.getPassword()%></td> </tr>
-    <td>Email</td> <td><%=user.getEmail()%></td> </tr>
-    <td>Gender</td><td><%=user.getGender()%></td> </tr>
-    <td>Birthdate</td> <td><%=user.getBirthdate()%></td>
+        <td>Username</td><td><%=u.getUsername()%></td>
+    </tr><tr>
+    <td>Password</td><td><%=u.getPassword()%></td>
+</tr><tr>
+    <td>Email</td> <td><%=u.getEmail()%></td>
+</tr><tr>
+    <td>Gender</td><td><%=u.getGender()%></td>
+</tr><tr>
+    <td>Birthdate</td> <td><%=u.getBirthdate()%></td>
     </tr>
 </table>
 

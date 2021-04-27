@@ -7,4 +7,4 @@
     Date of Birth :<input type="text" name="birthDate"/><br/>
     <input type="submit" value="Register"/>
 </form>
-<%@include file="footer.jsp"%>
+<%@include file="WEB-INF/views/footer.jsp" %>

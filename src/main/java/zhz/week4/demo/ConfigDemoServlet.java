@@ -10,8 +10,8 @@ import java.io.PrintWriter;
 import java.io.Writer;
 
 @WebServlet(name="ConfigDemoServlet",urlPatterns="/jdbc",initParams={
-        @WebInitParam(name="name",value="JieMengyao"),
-        @WebInitParam(name="student-id",value="2019211001001201")
+        @WebInitParam(name="name",value="zhanghuazhi"),
+        @WebInitParam(name="student-id",value="2019211001001029")
 })
 
 public class ConfigDemoServlet extends HttpServlet {

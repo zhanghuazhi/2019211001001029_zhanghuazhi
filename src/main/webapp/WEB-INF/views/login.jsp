@@ -9,14 +9,32 @@
 <h1>Login</h1>
 <%
     if (!(request.getAttribute("message")==null)){
-        out.print("<h3>"+request.getAttribute("message")+"</h3>");
+        out.println(request.getAttribute("message"));
+    }
+%>
+<%
+    Cookie[] allCookies=request.getCookies();
+    String username="",password="",rememberMeVale="";
+    if (allCookies!=null){
+        for (Cookie c:allCookies){
+            if (c.getName().equals("cUsername")){
+                username=c.getValue();
+            }
+            if (c.getName().equals("cPassword")){
+                password=c.getValue();
+            }if (c.getName().equals("cRememberMe")){
+                rememberMeVale=c.getValue();
+            }
+        }
     }
 %>
 <form method="post" action="/2019211001001029zhanghuazhi_war_exploded/login">
     <table>
-        <tr> <td>Username:</td> <td><input type="text" name="Username" required><br/></td></tr>
-        <tr> <td>password:</td> <td><input type="password" name="password" required minlength="6"><br/></td></tr>
-        <tr> <td></td><td><input type="submit" value="Login"/></td>  </tr>
+        Username:<input type="text" name="Username" value="<%=username%>"><br/>
+        password:<input type="password" name="password" value="<%=password%>"><br/>
+        <input type="checkbox"name="rememberMe" value="1" <%=rememberMeVale.equals("1") ?"checked":""%>checked/>RememberMe<br/>
+        <input type="submit" value="Submit"/>
     </table>
 </form>
+   
 <%@include file="footer.jsp"%>

@@ -91,7 +91,7 @@
 
     <context-param>
 
-    <param-name>Username</param-name>
+    <param-name>username</param-name>
 
     <param-value>sa</param-value>
 
@@ -100,7 +100,7 @@
 
     <context-param>
 
-    <param-name>Password</param-name>
+    <param-name>password</param-name>
 
     <param-value>123456</param-value>
 

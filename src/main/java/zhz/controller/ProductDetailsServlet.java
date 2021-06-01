@@ -2,7 +2,6 @@ package zhz.controller;
 
 import zhz.dao.ProductDao;
 import zhz.model.Category;
-import zhz.model.Product;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -34,7 +33,7 @@ public class ProductDetailsServlet extends HttpServlet {
         if (request.getParameter("id")!=null) {
             int productId = Integer.parseInt(request.getParameter("id"));
             ProductDao productDao = new ProductDao();
-            Product product = productDao.findById(productId, con);
+            Integer product = productDao.findById(productId, con);
             request.setAttribute("p",product);
         }
             }catch (SQLException throwables) {

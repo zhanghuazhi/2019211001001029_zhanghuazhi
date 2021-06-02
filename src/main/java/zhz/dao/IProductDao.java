@@ -28,7 +28,7 @@ public interface IProductDao {
 	 *	Select a product by productId
 	 * @return Product model
 	 */
-	public Product findById(Integer productId, Connection con) throws SQLException;
+	public Integer findById(Integer productId, Connection con) throws SQLException;
 	/**
 	 * Select all product by categoryId
 	 * @param categoryId

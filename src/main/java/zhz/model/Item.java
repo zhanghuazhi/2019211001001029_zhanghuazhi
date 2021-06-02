@@ -13,6 +13,10 @@ public class Item {
         this.quantity = quantity;
     }
 
+    public Item(Integer p, int quantity) {
+
+    }
+
     public int getQuantity() {
         return quantity;
     }

@@ -2,7 +2,6 @@ package zhz.controller;
 
 import zhz.dao.ProductDao;
 import zhz.model.Item;
-import zhz.model.Product;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -53,14 +52,14 @@ public class CartServlet extends HttpServlet {
         ProductDao productDao=new ProductDao();
         if (session.getAttribute("cart")==null){
             List<Item> cart=new ArrayList<Item>();
-            Product p=productDao.findById(id,con);
+            Integer p=productDao.findById(id,con);
             cart.add(new Item(p,quantity));
             session.setAttribute("cart",cart);
         }else {
             List<Item> cart =(List<Item>) session.getAttribute("cart");
             int index=isExisting(id,cart);
             if (index==-1){
-                Product p=productDao.findById(id,con);
+                Integer p=productDao.findById(id,con);
                 cart.add(new Item(p,1));
             }else{
                 int newQuantity=cart.get(index).getQuantity()+1;

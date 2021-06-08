@@ -65,5 +65,17 @@ public class User {
                 + gender + ", birthdate=" + birthdate + "]";
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public Object getBirthDate() {
+        Object birthDate = null;
+        return birthDate;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
 

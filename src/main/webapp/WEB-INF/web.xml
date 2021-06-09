@@ -42,9 +42,6 @@
         <url-pattern>/config</url-pattern>
     </servlet-mapping>
 
-
-
-
     <listener>
 
     <listener-class>zhz.week6.demo.JDBCServletContextListener</listener-class>
@@ -114,5 +111,15 @@
     <!-- x= 5,a= x so we can say a=5
      so /hello==com.zhz.week2.demo.HelloWorldServlet
      -->
+
+    <filter>
+        <filter-name>ZHZFilter</filter-name>
+        <filter-class>zhz.lab2.ZHZFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ZHZFilter</filter-name>
+        <url-pattern>/lab2/welcome.jsp</url-pattern>
+    </filter-mapping>
+
 
 </web-app>

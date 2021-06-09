@@ -1,7 +1,7 @@
-<%@ page import="com.lab1.Person" %>
+<%@ page import="zhz.lab1.Person" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.lab1.Dog" %><%--
+<%@ page import="zhz.lab1.Dog" %><%--
   Created by IntelliJ IDEA.
   User: Lenovo
   Date: 5/15/2021

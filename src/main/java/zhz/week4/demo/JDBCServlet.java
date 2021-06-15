@@ -16,7 +16,7 @@ import javax.servlet.annotation.WebServlet;
                 @WebInitParam(name="driver",value="com.microsoft.sqlserver.jdbc.SQLServerDriver"),
                 @WebInitParam(name="url",value="jdbc:sqlserver://localhost:1433;databaseName=userdb;"),
                 @WebInitParam(name="username",value="sa"),
-                @WebInitParam(name="password",value="123456789"),
+                @WebInitParam(name="password",value="123456"),
         },loadOnStartup = 1
 )
 public class JDBCServlet extends HttpServlet {
